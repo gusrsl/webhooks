@@ -1,73 +1,79 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Dockerización de Aplicación NestJS y GitHub Actions
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Descripción
+Este repositorio demuestra cómo Dockerizar una aplicación NestJS y configurar un flujo de trabajo en GitHub Actions para construir y desplegar contenedores de Docker.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Pasos por seguir
 
-## Description
+### 1. Crear Repositorio
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Crea un repositorio público o privado en GitHub. [Enlace al Repositorio](https://github.com/gusrsl/webhooks)
 
-## Installation
+### 2. Preparar el Código Fuente
 
-```bash
-$ yarn install
-```
 
-## Running the app
+git init
+git add .
+git commit -m "Primer commit con el código fuente"
+3. Subir Código al Repositorio
+bash
+Copy code
+git remote add origin https://github.com/gusrsl/webhooks.git
+git branch -M main
+git push -u origin main
 
-```bash
-# development
-$ yarn run start
+### 4. Configurar Secrets en GitHub
 
-# watch mode
-$ yarn run start:dev
+Crea los secrets DOCKER_USER y DOCKER_PASSWORD en la sección de Secrets de tu repositorio en GitHub.
 
-# production mode
-$ yarn run start:prod
-```
+### 5. Configurar Token de Docker Hub
 
-## Test
+Utiliza tu usuario y clave (token) de Docker Hub para llenar los secrets DOCKER_USER y DOCKER_PASSWORD.
+Crea un Token en Docker (con el nombre Github-Actions) y copia este Token generado en el secret DOCKER_PASSWORD.
 
-```bash
-# unit tests
-$ yarn run test
+### 6. Crear Action Docker Image
 
-# e2e tests
-$ yarn run test:e2e
+Configura un flujo de trabajo en GitHub Actions para generar la imagen Docker utilizando el archivo docker-image.yml.
 
-# test coverage
-$ yarn run test:cov
-```
+#### 7. Dockerizar la Aplicación
 
-## Support
+Dockeriza tu aplicación NestJS (preferiblemente un servicio REST o GraphQL sin dependencias).
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+#### 8. Verificar Construcción y Funcionamiento
 
-## Stay in touch
+Asegúrate de que la imagen puede ser compilada con el siguiente comando:
+bash
+Copy code
+docker build -t gusrsl/webhooks:0.0.1 .
+Verifica el funcionamiento de la aplicación.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+#### 9. Sistematizar Versiones
 
-## License
+Aplica los siguientes pasos en el archivo docker-image.yml para generar contenedores y sistematizar versiones.
+Evidencias
+      1. Creación del Repositorio en GitHub
+      Creación del Repositorio
 
-Nest is [MIT licensed](LICENSE).
+      2. Preparación del Código Fuente
+      ...
+
+      3. Subida del Código al Repositorio
+      ...
+
+      4. Configuración de Secrets en GitHub
+      ...
+
+      5. Configuración del Token de Docker Hub
+      ...
+
+      6. Creación de la Action Docker Image
+      ...
+
+      7. Dockerización de la Aplicación
+      ...
+
+      8. Verificación de la Construcción y Funcionamiento
+      ...
+
+      9. Sistematización de Versiones
+      ...
