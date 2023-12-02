@@ -32,7 +32,6 @@ Utiliza tu usuario y clave (token) de Docker Hub para llenar los secrets DOCKER_
 Crea un Token en Docker (con el nombre Github-Actions) y copia este Token generado en el secret DOCKER_PASSWORD.
 
 ### 6. Crear Action Docker Image
-
 Configura un flujo de trabajo en GitHub Actions para generar la imagen Docker utilizando el archivo docker-image.yml.
 
 #### 7. Dockerizar la Aplicación
@@ -51,29 +50,29 @@ Verifica el funcionamiento de la aplicación.
 
 Aplica los siguientes pasos en el archivo docker-image.yml para generar contenedores y sistematizar versiones.
 Evidencias
-      1. Creación del Repositorio en GitHub
-      Creación del Repositorio
+  1. Creación del Repositorio en GitHub
+    Creación del Repositorio
 
-      2. Preparación del Código Fuente
+  2. Preparación del Código Fuente
       ...
 
-      3. Subida del Código al Repositorio
+  3. Subida del Código al Repositorio
       ...
 
-      4. Configuración de Secrets en GitHub
+  4. Configuración de Secrets en GitHub
       ...
 
-      5. Configuración del Token de Docker Hub
+  5. Configuración del Token de Docker Hub
       ...
 
-      6. Creación de la Action Docker Image
+  6. Creación de la Action Docker Image
       ...
 
-      7. Dockerización de la Aplicación
+  7. Dockerización de la Aplicación
       ...
 
-      8. Verificación de la Construcción y Funcionamiento
+  8. Verificación de la Construcción y Funcionamiento
       ...
 
-      9. Sistematización de Versiones
+  9. Sistematización de Versiones
       ...
