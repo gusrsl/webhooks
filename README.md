@@ -46,35 +46,24 @@ Copy code
 docker build -t gusrsl/webhooks:0.0.1 .
 Verifica el funcionamiento de la aplicación.
 
-#### 9. Sistematizar Versiones
-
-Aplica los siguientes pasos en el archivo docker-image.yml para generar contenedores y sistematizar versiones.
 
 # Evidencias
 
-  1. Creación del Repositorio en GitHub
-    Creación del Repositorio
-
-  2. Preparación del Código Fuente
+  1. Preparación del Código Fuente
       ...
 
-  3. Subida del Código al Repositorio
+
+  2. Configuración de Secrets en GitHub
       ...
 
-  4. Configuración de Secrets en GitHub
+  3. Configuración del Token de Docker Hub
       ...
 
-  5. Configuración del Token de Docker Hub
+  4. Creación de la Action Docker Image
       ...
 
-  6. Creación de la Action Docker Image
+  5. Dockerización de la Aplicación
       ...
 
-  7. Dockerización de la Aplicación
-      ...
-
-  8. Verificación de la Construcción y Funcionamiento
-      ...
-
-  9. Sistematización de Versiones
+  6. Verificación de la Construcción y Funcionamiento
       ...
