@@ -52,19 +52,17 @@ Verifica el funcionamiento de la aplicación.
   1. Preparación del Código Fuente
       ![Código Fuente](./screenshots/cap1.png)
 
-
-
   2. Configuración de Secrets en GitHub
-      ...
+      ![Configuración de Secrets en GitHub](./screenshots/cap2.png)
 
   3. Configuración del Token de Docker Hub
-      ...
+      ![Token de Docker Hub](./screenshots/cap3.png)
 
   4. Creación de la Action Docker Image
-      ...
+      ![Action Docker Image](./screenshots/cap4.png)
 
   5. Dockerización de la Aplicación
-      ...
+      ![Dockerización de la Aplicación](./screenshots/cap5.png)
 
   6. Verificación de la Construcción y Funcionamiento
-      ...
+      ![Construcción y Funcionamiento](./screenshots/cap6.png)
