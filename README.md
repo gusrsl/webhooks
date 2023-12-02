@@ -50,7 +50,8 @@ Verifica el funcionamiento de la aplicación.
 # Evidencias
 
   1. Preparación del Código Fuente
-      ...
+      ![Código Fuente](./screenshots/cap1.png)
+
 
 
   2. Configuración de Secrets en GitHub
